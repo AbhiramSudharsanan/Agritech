@@ -1,0 +1,34 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .samsung-font {
+    font-family: 'SamsungSharpSans', sans-serif;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.contact-us form {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart {
+    cursor: pointer;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Buyer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SamsungSharpSans:wght@700&display=swap">
+</head>
+<body class="bg-green-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">AgriConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Farmers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+                <form class="d-flex ms-auto" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <button class="btn btn-primary ms-3" id="cartButton">Cart (<span id="cartCount">0</span>)</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center py-20 bg-cover bg-center text-white" style="background-image: url('https://images.unsplash.com/photo-1554350563-a444eb8b579d');">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-bold mb-4 text-black samsung-font">Welcome to AgriConnect</h1>
+            <p class="text-xl mb-8 text-black">Connecting farmers directly with buyers for a better tomorrow</p>
+            <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products py-20 bg-green-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Featured Products</h2>
+            <div class="row" id="productList">
+                <div class="col-md-4 mb-4 product-item" data-name="Fresh Tomatoes" data-price="50">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1582515073492-1ba1b83dc1f2" class="card-img-top" alt="Fresh Tomatoes">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Tomatoes</h5>
+                            <p class="card-text">₹50 per kg</p>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 product-item" data-name="Organic Carrots" data-price="40">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" class="card-img-top" alt="Organic Carrots">
+                        <div class="card-body">
+                            <h5 class="card-title">Organic Carrots</h5>
+                            <p class="card-text">₹40 per kg</p>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 product-item" data-name="Fresh Lettuce" data-price="30">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1577516584036-9b1f75a9a2c9" class="card-img-top" alt="Fresh Lettuce">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Lettuce</h5>
+                            <p class="card-text">₹30 per kg</p>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grocery Section -->
+    <section class="grocery-products py-20 bg-green-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Groceries</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 product-item" data-name="Rice" data-price="60">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1594130130283-daf77d2d1738" class="card-img-top" alt="Rice">
+                        <div class="card-body">
+                            <h5 class="card-title">Rice</h5>
+                            <p class="card-text">₹60 per kg</p>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 product-item" data-name="Wheat" data-price="45">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1601092443859-20168e36f933" class="card-img-top" alt="Wheat">
+                        <div class="card-body">
+                            <h5 class="card-title">Wheat</h5>
+                            <p class="card-text">₹45 per kg</p>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 product-item" data-name="Pulses" data-price="70">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1603034103390-5b4e93d54097" class="card-img-top" alt="Pulses">
+                        <div class="card-body">
+                            <h5 class="card-title">Pulses</h5>
+                            <p class="card-text">₹70 per kg</p>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farmer Profiles -->
+    <section class="farmer-profiles py-20 bg-green-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Meet Our Farmers</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1550418290-a8d86ad674d7" class="card-img-top" alt="Farmer 1">
+                        <div class="card-body">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text">John is a seasoned farmer from California growing organic vegetables.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1594759936953-1f3f5e15da7a" class="card-img-top" alt="Farmer 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Jane Smith</h5>
+                            <p class="card-text">Jane is an experienced farmer from Texas, specializing in organic fruit production.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad" class="card-img-top" alt="Farmer 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Mohammed Ali</h5>
+                            <p class="card-text">Mohammed is a passionate farmer from Florida, growing a variety of organic vegetables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact-us py-20 bg-green-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
+            <form id="contactForm" class="max-w-lg mx-auto bg-white p-8 shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 AgriConnect. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter"></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
